@@ -1,0 +1,15 @@
+BL##
+0=ALARM#
+1=FM-10-99-002-02#
+2=AP-OTA-ZXJ-100002#
+3=20191107164330669#
+4=RedHat74|192.168.158.238#
+5=UPAY-ZXJF#
+6=TXN#
+7=oc-front#
+8=UPAY-oc-front-server-8081#
+9=APP#（告警类型）
+10=商户前置-签到签退结果通知 ：http协议异常|http协议异常,3次重发失败，重发失败，已达到最大重发次数#
+11=200#（省编码）
+12=OriginalSystem:200,Home-System:0001,ActivityCode:T1000172,UPAYRspCode:015A03,FirstLevelCode:015A03,SecondLevelCode:,PhoneNumber:,Inner_transID:10201911071643301538732493070517,Outer_transID:T10001722019110716333369434910,CodeInfo:com.cmsz.oc.front.service.CheckInNotifyServiceImpl,BizLine:
+##LB

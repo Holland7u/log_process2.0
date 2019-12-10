@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息接受页</title>
+    <style>
+        .window{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 400px;
+            margin: auto;
+            height: 400px;
+            border: 2px solid cornflowerblue;
+        }
+    </style>
+</head>
+<body onload="con()">
+<div class="window" >
+    <div id="info"></div>
+</div>
+</body>
+
+<script>
+    let info = document.getElementById("info");
+    function con() {
+        if("WebSocket" in window){
+            alert("您的浏览器支持WebSocket，正在为您提供实时推送服务");
+            var socket = new WebSocket("ws://localhost:9001/websocket");
+            socket.onopen=()=>{
+                alert("已经连接上了")
+            }
+            socket.onmessage=(message)=>{
+                var msg = message.data;
+                var info1 = info.innerHTML;
+                console.log(info1);
+                info1 += msg+"</br>";
+                info.innerHTML=info1;
+                var oDate = new Date();
+                console.log(oDate+"")
+            }
+            socket.onclose=()=>{
+                alert("连接关闭")
+            }
+        }else{
+            alert("您的浏览器不支持WebSocket无法为您提供实时推送服务")
+        }
+    }
+</script>
+</html>
